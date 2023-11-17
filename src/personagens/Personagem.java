@@ -16,13 +16,16 @@ public class Personagem {
 	public void desenhar() {
 		
 	}
-	public void falar() {
-		
+	
+	public void falar(String frase) {
+		System.out.println(this.name + " falou: " + frase);
 	}
+	
 	public void arma() {
-		
+		arma.usarArma();		
 	}
-	public void setArma() {
-		
+	public void setArma(Arma arma) {
+		this.arma = arma;
 	}
+	
 }
