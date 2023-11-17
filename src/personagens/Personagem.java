@@ -27,5 +27,13 @@ public class Personagem {
 	public void setArma(Arma arma) {
 		this.arma = arma;
 	}
-	
+	public String getProfile() {
+		String name = "---------  "+this.name+"  ---------\n";
+		String arma = "Arma: "+this.arma.getName()+" - Dano: "+this.arma.getDamage();
+		String profileDescription = name+arma;
+		
+		System.out.println(profileDescription);
+
+		return profileDescription;
+	}
 }
