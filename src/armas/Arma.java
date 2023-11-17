@@ -10,8 +10,8 @@ public class Arma {
 	}
 	
 	public void  usarArma() {
-		System.out.println("Chamando o metodo usarArma");
-	}
+		System.out.println("Chamando o metodo usarArma com a arma "+this.name);
+	} 
 	
 	public String getName() {
 		return name;

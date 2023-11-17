@@ -1,11 +1,11 @@
 package personagens;
 
-import armas.Arma;
+import armas.Revolver;
 
 public class Soldado extends Personagem{
 
-	public Soldado(String name, Arma arma) {
-		super(name, arma);
+	public Soldado(String name) {
+		super(name, new Revolver());
 		// TODO Auto-generated constructor stub
 	}
 

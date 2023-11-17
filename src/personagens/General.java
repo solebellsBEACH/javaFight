@@ -1,11 +1,11 @@
 package personagens;
 
-import armas.Arma;
+import armas.Fuzil;
 
 public class General extends Personagem{
 
-	public General(String name, Arma arma) {
-		super(name, arma);
+	public General(String name) {
+		super(name, new Fuzil());
 		// TODO Auto-generated constructor stub
 	}
 

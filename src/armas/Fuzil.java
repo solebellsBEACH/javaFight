@@ -5,10 +5,10 @@ public class Fuzil extends Arma{
 	Integer quantBullets;
 	boolean isAuto;
 	
-	public Fuzil(String name, Integer damage, Integer quantBullets, boolean isAuto) {
-		super(name, damage);
-		this.quantBullets = quantBullets;
-		this.isAuto = isAuto;
+	public Fuzil() {
+		super("Fuzil", 300);
+		this.quantBullets = 20;
+		this.isAuto = true;
 	}
 	
 
