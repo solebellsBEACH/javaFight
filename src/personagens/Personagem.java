@@ -32,7 +32,7 @@ public class Personagem {
 		String arma = "Arma: "+this.arma.getName()+" - Dano: "+this.arma.getDamage();
 		String profileDescription = name+arma;
 		
-		System.out.println(profileDescription);
+		System.out.println("getProfile run");
 
 		return profileDescription;
 	}

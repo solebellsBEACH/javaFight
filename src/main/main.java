@@ -1,11 +1,17 @@
 package main;
 
+import lib.Forms;
+
 public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		GameManager manager = new GameManager();
+		Forms forms = new Forms();
 		
-		System.out.println("TESTANDO !!");
+		manager.cadastrarPersonagensDefault();
+		
+		forms.MenuForm(manager);
 
 	}
 
