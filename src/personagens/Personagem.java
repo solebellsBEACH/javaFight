@@ -5,15 +5,16 @@ import lib.Helpers;
 
 public class Personagem {
 	
-	String name;
+	String name, className;
 	Arma arma;
 	Double numeroDeVidas;
 	
-	public Personagem(String name, Arma arma, Double numeroDeVidas) {
+	public Personagem(String name, Arma arma, Double numeroDeVidas, String className) {
 		super();
 		this.name = name;
 		this.arma = arma;
 		this.numeroDeVidas = numeroDeVidas;
+		this.className = className;
 	}
 	
 	public void desenhar() {
@@ -53,13 +54,19 @@ public class Personagem {
 	}
 	public String getProfile() {
 		String name = "---------  "+this.name+"  ---------";
+		String classe = "\nClasse do personagem: "+this.className;
 		String arma = "\nArma: "+this.arma.getName()+" - Dano: "+this.arma.getDamage();
 		String vidas = "\nNúmero de vidas: " + this.numeroDeVidas;
-		String profileDescription = name+arma+vidas;
+		String profileDescription = name+classe+arma+vidas;
 		
 		System.out.println("getProfile run");
 
 		return profileDescription;
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
 
 }

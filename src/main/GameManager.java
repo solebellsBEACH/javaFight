@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 
+import lib.InOut;
 import personagens.CraqueNeto;
 import personagens.Dragao;
 import personagens.General;
@@ -13,6 +14,7 @@ import personagens.Soldado;
 
 public class GameManager {
 	List<Personagem> listaDePersonagensDefault = new ArrayList<>();
+	Personagem personagemPlayer;
 	
 	public void cadastrarPersonagensDefault() {
 		listaDePersonagensDefault.add(new Dragao("Dragão Default"));
@@ -31,5 +33,12 @@ public class GameManager {
 			i++;
 		}
         return list;
+	}
+	
+	public void setPersonagemPlayer(int indexPersonagem, String name) {
+		Personagem personagem  = listaDePersonagensDefault.get(indexPersonagem);
+		personagem.setName(name);
+		this.personagemPlayer = personagem;
+		InOut.MsgDeAviso("Personagem Escolhido com Sucesso", this.personagemPlayer.getProfile());
 	}
 }

@@ -6,7 +6,7 @@ import lib.Helpers;
 public class Dragao extends Personagem{
 
 	public Dragao(String name) {
-		super(name, new BafoDeFogo(), 1000.0);
+		super(name, new BafoDeFogo(), 1000.0, "Dragão");
 		// TODO Auto-generated constructor stub
 	}
 	
