@@ -9,7 +9,9 @@ public class Forms {
 			opcao = InOut.leInt("0-Encerrar operação \n1-Listar Personagens");
 			int numOpcoes = 1;
 			switch (opcao) {
-			case 0: break;
+			case 0: 
+				InOut.MsgDeAviso("Até mais !!", "Você encerrou o processo, até uma outra hora !!");
+				break;
 			case 1: {
 				InOut.MsgDeAviso("Lista de Personagens!!", manager.listPersonagensDefault());
 				break;
