@@ -1,6 +1,7 @@
 package personagens;
 
 import armas.Arma;
+import lib.Helpers;
 
 public class Personagem {
 	
@@ -24,9 +25,20 @@ public class Personagem {
 	}
 	
 	public void tomarDano(Double damage) {
+//		Se o número aleatório for divisível por 3 o dragão voa e ele toma metade do Dano
+		int randomNumber = new Helpers().geradorNumeroAleatorio();
+		
+		if(randomNumber % 3 == 0) damage = this.correr(damage);
+		
 		this.numeroDeVidas = this.numeroDeVidas - damage;
 		if(this.numeroDeVidas<=0) this.morrer();
 		else System.out.println("Você tomou dano, e agora você tem => "+this.numeroDeVidas+" vidas;");
+	}
+	
+	private Double correr(Double damage) {
+		System.out.println("Sou o " + this.name + " e estou correndo!!");
+		int fracaoDoDano = new Helpers().geradorNumeroAleatorio();
+		return damage/fracaoDoDano;
 	}
 	
 	public void falar(String frase) {
