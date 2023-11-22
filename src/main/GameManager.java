@@ -14,7 +14,7 @@ import personagens.Soldado;
 
 public class GameManager {
 	List<Personagem> listaDePersonagensDefault = new ArrayList<>();
-	Personagem personagemPlayer;
+	Personagem personagemPlayer, personagemAdversario;
 	
 	public void cadastrarPersonagensDefault() {
 		listaDePersonagensDefault.add(new Dragao("Dragão Default"));
@@ -40,5 +40,12 @@ public class GameManager {
 		personagem.setName(name);
 		this.personagemPlayer = personagem;
 		InOut.MsgDeAviso("Personagem Escolhido com Sucesso", this.personagemPlayer.getProfile());
+	}
+	
+	public void setPersonagemAdversario(int indexPersonagem, String name) {
+		Personagem personagem  = listaDePersonagensDefault.get(indexPersonagem);
+		personagem.setName(name);
+		this.personagemAdversario = personagem;
+		InOut.MsgDeAviso("Personagem Escolhido com Sucesso", this.personagemAdversario.getProfile());
 	}
 }

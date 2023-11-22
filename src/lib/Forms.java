@@ -21,6 +21,10 @@ public class Forms {
 				String name = InOut.leString("Insira o nome do seu Personagem");
 				manager.setPersonagemPlayer(indexPersonagemPlayer, name);
 				
+				int indexPersonagemAdversario = InOut.leInt("Insira o index do Personagem do seu Adversário");
+				String nameAdversario = InOut.leString("Insira o nome do seu Adversário");
+				manager.setPersonagemAdversario(indexPersonagemAdversario, nameAdversario);
+				opcao = 0;
 				break;
 			}
 			default:
