@@ -2,21 +2,22 @@ package armas;
 
 public class Arma {
 	String name;
-	Integer damage;
+	Double damage;
 	
-	public Arma(String name, Integer damage) {
+	public Arma(String name, Double damage) {
 		this.name = name;
 		this.damage = damage;
 	}
 	
-	public void  usarArma() {
+	public Double  usarArma() {
 		System.out.println("Chamando o metodo usarArma com a arma "+this.name);
+		return this.damage;
 	} 
 	
 	public String getName() {
 		return name;
 	}
-	public Integer getDamage() {
+	public Double getDamage() {
 		return damage;
 	}
 		

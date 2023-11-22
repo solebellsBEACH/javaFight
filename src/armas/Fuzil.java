@@ -6,7 +6,7 @@ public class Fuzil extends Arma{
 	boolean isAuto;
 	
 	public Fuzil() {
-		super("Fuzil", 300);
+		super("Fuzil", 100.9);
 		this.quantBullets = 20;
 		this.isAuto = true;
 	}

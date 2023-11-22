@@ -48,4 +48,14 @@ public class GameManager {
 		this.personagemAdversario = personagem;
 		InOut.MsgDeAviso("Personagem Escolhido com Sucesso", this.personagemAdversario.getProfile());
 	}
+
+	public Personagem getPersonagemPlayer() {
+		return personagemPlayer;
+	}
+
+	public Personagem getPersonagemAdversario() {
+		return personagemAdversario;
+	}
+	
+	
 }

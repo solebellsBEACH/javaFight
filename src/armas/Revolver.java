@@ -6,7 +6,7 @@ public class Revolver extends Arma{
 	boolean isAuto;
 	
 	public Revolver() {
-		super("Revolver", 120);
+		super("Revolver", 120.5);
 		this.quantBullets = 5;
 		this.isAuto = false;
 	}

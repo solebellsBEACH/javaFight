@@ -1,6 +1,7 @@
 package lib;
 
 import main.GameManager;
+import personagens.Personagem;
 
 public class Forms {
 	public void MenuForm(GameManager manager) {
@@ -24,6 +25,7 @@ public class Forms {
 				int indexPersonagemAdversario = InOut.leInt("Insira o index do Personagem do seu Adversário");
 				String nameAdversario = InOut.leString("Insira o nome do seu Adversário");
 				manager.setPersonagemAdversario(indexPersonagemAdversario, nameAdversario);
+				
 				opcao = 0;
 				break;
 			}
@@ -33,5 +35,23 @@ public class Forms {
 		}
 	}
 	
+	public void GameForm(GameManager manager) {
+		Personagem Player = manager.getPersonagemPlayer();
+		Personagem Adversario = manager.getPersonagemAdversario();
+		int countPlayer = 0; // se for impar ele troca o personagem 
+		while (Player.getNumeroDeVidas() > 0 && Adversario.getNumeroDeVidas() > 0) {
+			if(countPlayer % 2 == 0)this.BattleForm(Player, Adversario);
+			else this.BattleForm( Adversario, Player);
+			countPlayer = countPlayer+1;
+		}
+		
+	}
+	
+	private void BattleForm (Personagem player, Personagem playerAdv ) {
+		Double dano = player.arma();
+		playerAdv.tomarDano(dano);
+		InOut.MsgDeAviso("Executar ataque: "+player.getArma().getName(), playerAdv.getName()+" agora tem "+playerAdv.getNumeroDeVidas()+" vidas!!");
+		
+	}
 	
 }

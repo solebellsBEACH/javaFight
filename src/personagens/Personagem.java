@@ -46,9 +46,14 @@ public class Personagem {
 		System.out.println(this.name + " falou: " + frase);
 	}
 	
-	public void arma() {
-		arma.usarArma();		
+	public Double arma() {
+		return arma.usarArma();		
 	}
+	
+	public Arma getArma() {
+		return arma;
+	}
+
 	public void setArma(Arma arma) {
 		this.arma = arma;
 	}
@@ -67,6 +72,13 @@ public class Personagem {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 
+	public Double getNumeroDeVidas() {
+		return numeroDeVidas;
+	}
+
+	public String getName() {
+		return name;
+	}
+	
 }
