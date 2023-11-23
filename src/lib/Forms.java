@@ -30,7 +30,7 @@ public class Forms {
 				break;
 			}
 			default:
-				throw new IllegalArgumentException("O Valor " + opcao +" não é valido, digite um valor entre 0 e "+ numOpcoes);
+				throw new IllegalArgumentException("O Valor " + opcao + " não é valido, digite um valor entre 0 e "+ numOpcoes);
 			}	
 		}
 	}
@@ -50,7 +50,9 @@ public class Forms {
 	private void BattleForm (Personagem player, Personagem playerAdv ) {
 		Double dano = player.arma();
 		playerAdv.tomarDano(dano);
-		InOut.MsgDeAviso("Executar ataque: "+player.getArma().getName(), playerAdv.getName()+" agora tem "+playerAdv.getNumeroDeVidas()+" vidas!!");
+		Double vidaAdv = playerAdv.getNumeroDeVidas();
+		if(vidaAdv<=0)InOut.MsgDeAviso("Ja era !!", "Fim da linha para "+playerAdv.getName()+", o "+player.getName()+" venceu essa partida!!!");
+		else InOut.MsgDeAviso("Executar ataque: "+player.getArma().getName(), playerAdv.getName()+" agora tem "+ vidaAdv +" vidas!!");
 		
 	}
 	
