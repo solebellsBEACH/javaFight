@@ -7,7 +7,7 @@ public class Mago extends Personagem{
 	
 	
 	public Mago(String name) {
-		super(name, new Cajado(), 70.0, "Mago");
+		super(name, new Cajado(), 100.0, "Mago");
 		// TODO Auto-generated constructor stub
 	}
 
@@ -17,7 +17,7 @@ public class Mago extends Personagem{
 		
 		this.numeroDeVidas = this.numeroDeVidas - damage;
 		if(this.numeroDeVidas<=0) this.morrer();
-		else System.out.println("Você tomou dano, e agora você tem => "+this.numeroDeVidas+" vidas;");
+		else System.out.println("Você tomou dano, e agora você tem => " + this.numeroDeVidas + " vidas;");
 	}
 	
 	private Double mandarMagiaDeDefesa(Double damage) {

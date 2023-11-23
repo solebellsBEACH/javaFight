@@ -40,10 +40,11 @@ public class Forms {
 		Personagem Adversario = manager.getPersonagemAdversario();
 		int countPlayer = 0; // se for impar ele troca o personagem 
 		while (Player.getNumeroDeVidas() > 0 && Adversario.getNumeroDeVidas() > 0) {
-			if(countPlayer % 2 == 0)this.BattleForm(Player, Adversario);
+			if(countPlayer % 2 == 0) this.BattleForm(Player, Adversario);
 			else this.BattleForm( Adversario, Player);
 			countPlayer = countPlayer+1;
 		}
+		
 		
 	}
 	
@@ -52,7 +53,7 @@ public class Forms {
 		playerAdv.tomarDano(dano);
 		Double vidaAdv = playerAdv.getNumeroDeVidas();
 		if(vidaAdv<=0)InOut.MsgDeAviso("Ja era !!", "Fim da linha para "+playerAdv.getName()+", o "+player.getName()+" venceu essa partida!!!");
-		else InOut.MsgDeAviso("Executar ataque: "+player.getArma().getName(), playerAdv.getName()+" agora tem "+ vidaAdv +" vidas!!");
+		else InOut.MsgDeAviso("Ataque executado: "+player.getArma().getName(), "\nO personagem "+player.getName()+" realizou um ataque com o dano de "+dano+"\n"+playerAdv.getName()+" agora tem "+ vidaAdv +" vidas!!");
 		
 	}
 	
