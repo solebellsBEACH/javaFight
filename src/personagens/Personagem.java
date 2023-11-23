@@ -2,6 +2,7 @@ package personagens;
 
 import armas.Arma;
 import lib.Helpers;
+import lib.InOut;
 
 public class Personagem {
 	
@@ -43,7 +44,7 @@ public class Personagem {
 	}
 	
 	public void falar(String frase) {
-		System.out.println(this.name + " falou: " + frase);
+		InOut.MsgDeAviso(this.name + " falou: ", frase);
 	}
 	
 	public Double arma() {

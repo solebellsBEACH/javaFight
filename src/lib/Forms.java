@@ -53,7 +53,7 @@ public class Forms {
 		playerAdv.tomarDano(dano);
 		Double vidaAdv = playerAdv.getNumeroDeVidas();
 		if(vidaAdv<=0)InOut.MsgDeAviso("Ja era !!", "Fim da linha para "+playerAdv.getName()+", o "+player.getName()+" venceu essa partida!!!");
-		else InOut.MsgDeAviso("Ataque executado: "+player.getArma().getName(), "\nO personagem "+player.getName()+" realizou um ataque com o dano de "+dano+"\n"+playerAdv.getName()+" agora tem "+ vidaAdv +" vidas!!");
+		else player.falar("Ataque executado: "+player.getArma().getName()+ "\nO personagem "+player.getName()+" realizou um ataque com o dano de "+dano+"\n"+playerAdv.getName()+" agora tem "+ vidaAdv +" vidas!!");
 		
 	}
 	
