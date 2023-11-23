@@ -7,7 +7,7 @@ public class Mago extends Personagem{
 	
 	
 	public Mago(String name) {
-		super(name, new Cajado(), 100.0, "Mago");
+		super(name, new Cajado(), 400.0, "Mago");
 		// TODO Auto-generated constructor stub
 	}
 
