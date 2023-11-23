@@ -1,4 +1,6 @@
 package lib;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 /** 
@@ -293,12 +295,14 @@ public class InOut {
 		JOptionPane.showMessageDialog(null, frase, cabecalho, 
 				  					  JOptionPane.WARNING_MESSAGE);
 	}
-	
-	
-	public static void main(String [] args){
-		
-		
+	public static void MsgComImagem (String cabecalho, String frase, String imagePath){
+		 	ImageIcon icon = new ImageIcon(imagePath);
+	        // Criando um JLabel com a imagem
+	        // Exibindo o JOptionPane com a imagem
+	        JOptionPane.showMessageDialog(null, cabecalho, frase, JOptionPane.INFORMATION_MESSAGE, icon);
 	}
+	
+
 
     
 }

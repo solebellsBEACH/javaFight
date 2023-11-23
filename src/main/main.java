@@ -14,8 +14,7 @@ public class main {
 		forms.MenuForm(manager);
 		
 		forms.GameForm(manager);
-		
-		
+
 	}
 
 }

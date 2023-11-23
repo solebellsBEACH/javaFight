@@ -6,20 +6,29 @@ import lib.InOut;
 
 public class Personagem {
 	
-	String name, className;
+	String name, className, imagePath;
 	Arma arma;
 	Double numeroDeVidas;
 	
-	public Personagem(String name, Arma arma, Double numeroDeVidas, String className) {
+	public Personagem(String name, Arma arma, Double numeroDeVidas, String className, String imagePath) {
 		super();
 		this.name = name;
 		this.arma = arma;
 		this.numeroDeVidas = numeroDeVidas;
 		this.className = className;
+		this.imagePath = imagePath;
 	}
 	
-	public void desenhar() {
-		
+	private void desenhar(String cabecalho, String frase) {
+		InOut.MsgComImagem(cabecalho, frase, this.imagePath);
+	}
+	
+	public void ganhar(String cabecalho, String frase) {
+		this.desenhar(cabecalho, frase);
+	}
+	
+	public void falar(String frase) {
+		InOut.MsgDeAviso(this.name + " falou: ", frase);
 	}
 	
 	public void morrer() {
@@ -43,9 +52,7 @@ public class Personagem {
 		return damage/fracaoDoDano;
 	}
 	
-	public void falar(String frase) {
-		InOut.MsgDeAviso(this.name + " falou: ", frase);
-	}
+
 	
 	public Double arma() {
 		return arma.usarArma();		
